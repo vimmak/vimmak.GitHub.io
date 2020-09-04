@@ -1,0 +1,195 @@
+---
+layout: post
+title:  "What is Arduino!"
+date:   2020-09-05 07:44:47 +0800
+categories: Arduino
+---
+# Arduino
+
+### 什么是Arduino？
+
+Arduino是一个开发各类设备，让你比台式电脑更能充分感知和控制物理世界的生态系统。Arduino是一个基于一系列单片机电路板的开源物理计算平台，一个编写用于Arduino和Genuino开发板的软件开发环境和一个拥有活跃开发者和用户社区。
+
+Arduino可用于开发交互式物体，接受来自各类开关或传感器的输入，并能控制各种灯光、马达和其他物理输出装置。Arduino项目可以单独运行，也可以与您计算机上运行的软件（Processing、MaxMSP）配合使用。您可以手动组装简单的开发板，或购买预装的整套开发板， [还可以免费下载开源Arduino软件(IDE)](https://www.arduino.cc/en/Main/Software)。
+
+Arduino编程所用编程语言是以Processing多媒体编程环境为基础的物理计算平台Wiring。通过多年的努力，Arduino软件（IDE）已经演变成能支持由英特尔和三星等公司制造的众多核心板和开发板。
+
+### 为何选择Arduino？
+
+目前市场上还有许多其他可用于物理运算的单片机和和单片机平台。Parallax Basic Stamp、Netmedia的BX-24、Phidgets、麻省理工学院的Handyboard都能提供类似的功能。所有这些工具都有极其繁琐的单片机编程细节，却将这些细节打着易于使用广告的包装盒里。Arduino不但简化了使用单片机工作的流程，同时还为教师、学生以及兴趣爱好者提供了一些其他系统不具备的优势：
+
+- 便宜
+  相比其他单片机平台而言，Arduino和Genuino开发板价格相对便宜。这一系列各类开发板的价格各不相等，从15美元的Micro到低于80美元的32位功能更强大开发板，以Uno版本为例，国内市场价从30元（国产版本）到100元（意大利版本）不等。
+- 跨平台运行
+  Arduino软件（IDE）能在Windows、Macintosh OSX和Linux操作系统中运行，而大多数其他单片机系统仅限于在Windows操作系统中运行，亦可使用VS Code移植Arduino环境后使用
+- 简单明了的编程环境
+  Arduino的编程环境易于初学者使用，同时对高级用户来讲也足够灵活。对于教师来说，Arduino以Processing编程环境为基础，因此学过Processing的学生对Arduino软件（IDE）的外观和感觉非常熟悉。
+- 开源和可扩展软件
+  Arduino软件（IDE）作为开源工具发布，允许有经验的程序员在其基础上进行扩展开发。所使用的编程语言可以通过C++库进行扩展，想了解技术细节的用户可以从Arduino跨越到Arduino以此为基础的AVR C语言。同样，您可以根据需要直接将AVR-C代码添加到您的Arduino程序中。
+- 开源和可扩展硬件
+  Arduino以Atmel公司的ATMEGA 8位系列单片机及其SAM3X8E和SAMD21 32位单片机为硬件基础。开发板和模块计划在遵循“知识共享许可协议”的前提下发布，所以经验丰富的电路设计人员可以做出属于自己的模块，并进行相应的扩展和改进。即使是经验相对缺乏的用户也可以做出试验版的基本Uno开发板，便于了解其运行的原理并节约成本。
+
+### Arduino Uno
+
+**Arduino Uno**是基于ATmega328P（[数据表](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)）的微控制器板。它具有14个数字输入/输出引脚（其中6个可用作PWM输出），6个模拟输入，一个16 MHz陶瓷谐振器（CSTCE16M0V53-R0），USB连接，电源插孔，ICSP接头和复位按钮。它包含支持微控制器所需的一切；只需使用USB电缆将其连接到计算机，或使用AC-DC适配器或电池为它供电即可开始使用。 
+
+![dow9xS.jpg](https://s1.ax1x.com/2020/08/28/dow9xS.jpg)
+
+| 微控制器                | [ATmega328P](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061A.pdf) |
+| ----------------------- | ------------------------------------------------------------ |
+| 工作电压                | 5伏                                                          |
+| 输入电压（推荐）        | 7-12V                                                        |
+| 输入电压（极限）        | 6-20V                                                        |
+| 数字I / O引脚           | 14个（其中6个提供PWM输出）                                   |
+| PWM数字I / O引脚        | 6                                                            |
+| 模拟输入引脚            | 6                                                            |
+| 每个I / O引脚的直流电流 | 20毫安                                                       |
+| 3.3V引脚的直流电流      | 50毫安                                                       |
+| 快闪记忆体              | 32 KB（ATmega328P），其中引导加载程序使用了0.5 KB            |
+| SRAM                    | 2 KB（ATmega328P）                                           |
+| EEPROM                  | 1 KB（ATmega328P）                                           |
+| 时钟速度                | 16兆赫                                                       |
+| LED_BUILTIN             | 13                                                           |
+| 长度                    | 68.6毫米                                                     |
+| 宽度                    | 53.4毫米                                                     |
+| 重量                    | 25克                                                         |
+
+
+
+### 在Arduino桌面IDE上使用Arduino Uno
+
+[![img](https://www.arduino.cc/wiki/691d0d7748bba9211f4a1860d2928c26/WebEditor.svg)](https://create.arduino.cc/editor)
+
+所有Arduino板（包括该板）都可以在[Arduino Web Editor上直接使用](https://create.arduino.cc/editor)，**无需安装任何东西**。
+
+Arduino Web编辑器在线托管，因此它将始终是最新的，并具有所有板卡的最新功能和支持。请按照此[简单指南](https://create.arduino.cc/projecthub/Arduino_Genuino/getting-started-with-arduino-web-editor-4b3e4a)在浏览器上开始编码，并将您的草图上传到板上。
+
+如果要在离线时对[Arduino](https://www.arduino.cc/en/Main/Software) Uno进行编程，则需要安装[Arduino桌面](https://www.arduino.cc/en/Main/Software) IDE。Uno使用Arduino软件（IDE）进行编程，这是我们所有主板通用的集成开发环境。如继续进行操作之前，您**必须**已在PC上安装了Arduino软件（IDE），如《[入门指南](https://www.arduino.cc/en/Guide/HomePage)》首页中所述。
+
+用AB USB电缆连接Uno板；有时，此电缆称为*USB打印机电缆*
+
+[![A000066 ISO均](https://www.arduino.cc/wiki/static/193f2e0b88701497c56fcd7c0b983b2c/4b190/A000066_iso_both.jpg)](https://www.arduino.cc/wiki/static/193f2e0b88701497c56fcd7c0b983b2c/4b190/A000066_iso_both.jpg)[![USB电缆](https://www.arduino.cc/wiki/static/0829bbdc72a9c4c8be7a48de4cc2e41b/0479a/USBCable.jpg)](https://www.arduino.cc/wiki/static/0829bbdc72a9c4c8be7a48de4cc2e41b/0479a/USBCable.jpg)
+
+与PC的USB连接是对电路板进行编程所必需的，而不仅仅是为其供电。Uno会自动从USB或外部电源获取电源。使用USB电缆将开发板连接至计算机。绿色的电源指示灯（标记为**PWR**）应点亮。
+
+#### 安装板卡驱动程序
+
+如果您使用的是Installer，则Windows（XP至10）将在您连接开发板后自动安装驱动程序。
+
+_如果您下载并扩展了Zip程序包，或者由于某些原因未正确识别开发板，请按照以下步骤操作。_
+
+- 单击开始菜单，然后打开控制面板。
+- 在“控制面板”中，导航至“系统和安全性”。接下来，单击系统。系统窗口打开后，打开设备管理器。
+- 在端口（COM和LPT）下查看。您应该看到一个名为“ Arduino UNO（COMxx）”的开放端口。如果没有“ COM＆LPT”部分，请在“其他设备”下查找“未知设备”。
+- 右键单击“ Arduino UNO（COmxx）”端口，然后选择“更新驱动程序软件”选项。
+- 接下来，选择“浏览我的计算机以获取驱动程序软件”选项。
+- 最后，导航并选择名为**arduino.inf**的驱动程序文件，该文件位于Arduino软件下载的“ Drivers”文件夹中（而不是“ FTDI USB Drivers”子目录）。如果您使用的是旧版本的IDE（1.0.3或更早版本），请选择名为**“ Arduino UNO.inf”**的Uno驱动程序文件。
+- Windows将在那里完成驱动程序的安装。
+
+另请参阅：[在Windows XP下安装Uno的分步屏幕截图](https://www.arduino.cc/en/Guide/UnoDriversWindowsXP)。
+
+#### 打开你的第一个草图
+
+打开LED闪烁示例草图：**文件>示例> 01。基本>闪烁**。
+
+[![UNO负载闪烁](https://www.arduino.cc/wiki/static/769176014865d9e2b5255b4f4f6dcff2/7763a/UNO_Load_Blink.jpg)](https://www.arduino.cc/wiki/static/769176014865d9e2b5255b4f4f6dcff2/7763a/UNO_Load_Blink.jpg)
+
+#### 选择您的板子类型和端口
+
+您需要在**Tools> Board**菜单中选择与Arduino开发板相对应的条目。
+
+[![UNO董事会类型](https://www.arduino.cc/wiki/static/228ddb894ded2e0c6b13868cdaba1a46/4b190/UNO_BoardType.jpg)](https://www.arduino.cc/wiki/static/228ddb894ded2e0c6b13868cdaba1a46/4b190/UNO_BoardType.jpg)
+
+从工具|面板中选择串行设备。串行端口菜单。这可能是**COM3**或更高版本（**COM1**和**COM2**通常为硬件串行端口保留）。要找出答案，您可以断开板子并重新打开菜单；消失的条目应该是Arduino开发板。重新连接电路板，然后选择该串行端口。
+
+[![联合国港口](https://www.arduino.cc/wiki/static/bdbab2533752dbb0a6d18c02adeca0a0/4b190/UNO_Port.jpg)](https://www.arduino.cc/wiki/static/bdbab2533752dbb0a6d18c02adeca0a0/4b190/UNO_Port.jpg)
+
+#### 上传程序
+
+现在，只需单击环境中的“上传”按钮。等待几秒钟-您应该看到板上的RX和TX LED闪烁。如果上传成功，则显示消息“完成上传”。将显示在状态栏中。
+
+[![UNO上传](https://www.arduino.cc/wiki/static/0bd943210336ba4022b1b4e493775d82/008e2/UNO_Upload.png)](https://www.arduino.cc/wiki/static/0bd943210336ba4022b1b4e493775d82/008e2/UNO_Upload.png)
+
+上传完成几秒钟后，您应该看到板上的针脚13（L）LED开始闪烁（橙色）。如果可以的话，恭喜！您已经启动并运行了Arduino。如果遇到问题，请参阅[故障排除建议](https://www.arduino.cc/en/Guide/Troubleshooting)。
+
+
+
+
+## 适用于Arduino®的CNC Shield V3
+
+Arduino®的CNC Shield V3是Arduino兼容板，可将您的Arduino变成CNC控制器。使用开源固件，它可以使用[DRV8825或A4988](https://www.makerlab-electronics.com/product/stepper-motor-driver-drv8825/)步进电机驱动器控制多达4台[步进电机](https://www.makerlab-electronics.com/product/stepper-motor-nema-17-4500gcm/)，从而使您的CNC项目在数小时内轻松启动并运行。
+
+ ![dowfsg.jpg](https://s1.ax1x.com/2020/08/28/dowfsg.jpg)
+
+**特征：**
+
+- 兼容GRBL 0.8c。（在Arduino UNO上运行的开源固件将G代码命令转换为步进信号 https://github.com/grbl/grbl）
+- 4轴支持（X，Y，Z，A-可以使用引脚D12和D13使用自定义固件复制X，Y，Z或做完整的第4轴）
+- 每个轴2个终点挡块（总共6个）
+- 主轴使能和方向
+- 启用冷却液
+- 使用可移动的Pololu A4988兼容步进驱动器。（A4988，DRV8825等）
+- 跳线，用于设置步进驱动器的微步进。（某些驱动器（例如DRV8825）最多可以执行1/32微步进）
+- 紧凑的设计。
+- 步进电机可以通过4针Molex连接器进行连接。
+- 在12-36V DC上运行。（目前只有Pololu DRV8825驱动器可以处理高达36V的电压，因此在为开发板供电时请考虑工作电压。）
+
+
+
+## DFRobot DMX Shield扩展板模块
+
+**介绍** 
+
+Arduino DMX防护板是Arduino的附加组件（或“防护板”）。这是将Arduino用作DMX-Master设备的简单方法，只需在Arduino的顶部添加DMX-shield。 这款arduino DMX / RDM Shield是一种低成本的高质量解决方案，可让您将Arduino驱动的艺术品连接到DMX512网络。屏蔽层中装有高质量的NEUTRIK XLR 3针连接器（1个公头和1个母头）。基于MAX485的屏蔽可用作DMX主站，从站和RDM应答器。一个独特的RDM设备ID也会从您的范围内分发给您，这将使您的设备在世界范围内独一无二。 可以通过板载跳线配置以下设置： 通过TX或数字引脚4发送数据 通过RX或数字引脚3接收数据 硬件从机模式或通过数字引脚2进行软件控制的从机/主机（RDM必需） 启用/禁用屏蔽  如果您将屏蔽配置为使用RX和TX引脚，则必须先禁用屏蔽，然后才能将新草图上传到Arduino板上。该跳线允许您禁用屏蔽，而无需将其与Arduino板断开连接，从而节省了时间。
+
+**相片**
+
+![img](https://ae01.alicdn.com/kf/H0815e52b846143409d804d856bc8905dv.jpg)![img](https://ae01.alicdn.com/kf/H7fb7365e0a134b009c0c5978664e72d7S.jpg)![img](https://ae01.alicdn.com/kf/H375f680e36af4baa8be0f8c3be92ba06w.jpg)![img](https://ae01.alicdn.com/kf/Hd8b9e897d18b4ebab96f402afb798a18D.jpg)![img](https://ae01.alicdn.com/kf/H15e0e917837e44178d04ee3ad65d8fd7C.jpg)![img](https://ae01.alicdn.com/kf/Hd5b40a9f581d48c3857f6267698ad558l.jpg)
+
+
+
+## ESP8266-D1 Arduino兼容开发板
+
+ESP8266-D1是与Arduino IDE兼容的无线802.11（Wifi）微控制器开发板。它将非常流行的ESP8266无线（WiFi）模块变成了成熟的开发板。该开发板的布局基于标准的Arduino硬件设计，其比例与Arduino Uno和Leonardo相似。它还包括一组标准的Arduino接头连接器，这意味着可以将许多现有的Arduino屏蔽板直接插入开发板中（请参阅以下说明）。 
+
+**请注意：此板需要安装USB驱动程序。当前支持的操作系统包括Windows 7、8和10的所有32位和64位版本。驱动程序可以在本文的底部找到。
+
+这是一个3.3V开发板，与5V硬件不兼容。购买Arduino防护罩之前，请检查可比性。** 
+
+
+![图片](http://hobbycomponents.com/images/forum/ESP8266_D1_Features.png)
+
+
+**功能：**
+
+**ESP8266-D1开发板：**
+
+• 产品代码：HCDVBD0028
+• 集成了ESP8266模块，带有32位80MHz微控制器/ 4M闪存
+• microUSB串行/编程接口
+• 可以通过USB电缆供电–无需外部PSU
+• Arduino兼容插头
+• 直接由Aduino IDE支持
+• 2.1mm外部DC PSU插座（**6.5-12V**）
+
+
+**ESP8266模块：**
+
+• 802.11 b / g / n 
+• 集成的低功耗32位MCU 
+• 集成的10位ADC 
+• 集成的TCP / IP协议堆栈 
+• 集成的TR开关，巴伦，LNA，功率放大器和匹配网络 
+• 集成的PLL，稳压器和电源管理单元 
+•  支持天线分集 
+• WiFi 2.4 GHz，支持WPA / WPA2 
+• 支持STA / AP / STA + AP操作模式 
+• 支持Android和iOS设备的智能链接功能 
+• SDIO 2.0，（H）SPI，UART，I2C， I2S，IR远程控制，PWM，GPIO 
+• STBC，1x1 MIMO，2x1 MIMO 
+• A-MPDU和A-MSDU聚合和0.4s保护间隔 
+• 深度睡眠功率<10uA，掉电泄漏电流<5uA •待机功耗< 1.0mW（DTIM3） 
+• 唤醒并传输数据包在<2ms 
+• 802.11b模式下+20 dBm输出功率 
+• 工作温度范围-40C〜125C 
+• FCC，CE，TELEC，WiFi Alliance和SRRC认证 
